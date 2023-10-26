@@ -1,5 +1,4 @@
 {
-  // This section enables Universal Links
   "applinks": {
     "apps": [],
     "details": [
@@ -8,5 +7,5 @@
         "paths": ["/join/*"]
       }
     ]
-  },
+  }
 }
