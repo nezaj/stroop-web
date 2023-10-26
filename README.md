@@ -1,10 +1,6 @@
-# React Template
+# Stroopwafel Landing Page
 
-This is my minimal react boilerplate. It provides support for:
-
-* React
-* Tailwind, PostCSS, auto-prefixer
-* Absolute paths "@/"
+[See it live](https://stroopwafel/app)
 
 
 ## Quick Start
@@ -15,12 +11,9 @@ npm i
 make dev
 ```
 
-Start from scratch
+Depoy
 ```
-rm -rf .git
-git init
-git commit -m "Initial commit"
-git remote add origin ...
-git branch -M main
-git push -u origin main
+make deploy
 ```
+
+
