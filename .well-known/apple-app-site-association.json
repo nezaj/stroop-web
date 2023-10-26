@@ -1,0 +1,12 @@
+{
+  // This section enables Universal Links
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "F7UXG9KL42.com.jsventures.stroopwafel",
+        "paths": ["/join/*"]
+      }
+    ]
+  },
+}
