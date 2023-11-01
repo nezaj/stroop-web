@@ -4,7 +4,6 @@ import "./index.css";
 
 // Styles
 // -----------------------------
-const bgColor = "bg-violet-600";
 const colorStyleMap = {
   "text-red-400": { color: "rgb(248 113 113)" },
   "text-green-400": { color: "rgb(74 222 128)" },
@@ -13,7 +12,7 @@ const colorStyleMap = {
 };
 const infoTextStyle =
   "justify-start text-lg my-4 text-slate-100 font-medium text-left leading-8";
-const linkTextColor = "text-yellow-400";
+const linkTextColor = "text-yellow-400 hover:text-sky-400";
 const linkTextStyle = `text-center font-semibold underline ${linkTextColor}`;
 
 // avatarColor
@@ -100,7 +99,7 @@ function Stroop({ label, color }) {
 // -----------------------------
 function PlayerPosition({ handle, pos, goal, width }) {
   const avatarStyle = avatarColor(handle);
-  const shift = Math.round((pos / goal) * width * 0.86);
+  const shift = Math.round((pos / goal) * width * 0.8);
   const [currentShift, setCurrentShift] = useState(shift);
 
   useEffect(() => {
@@ -161,17 +160,33 @@ function Logo() {
   );
 }
 
-function Badge() {
+function Github() {
   return (
-    <div className="flex justify-center my-4">
-      <a href="https://apps.apple.com/us/app/stroopwafel/id6470153525">
-        <img
-          src="/badge.svg"
-          alt="Download on the App Store"
-          className="w-[150px]"
-        />
-      </a>
-    </div>
+    <a
+      href="https://github.com/jsventures/stroopwafel"
+      className={`${linkTextStyle}`}
+    >
+      Github
+    </a>
+  );
+}
+
+function AppStore() {
+  return (
+    <a
+      href="https://apps.apple.com/us/app/stroopwafel/id6470153525"
+      className={`${linkTextStyle}`}
+    >
+      App Store
+    </a>
+  );
+}
+
+function PageButton({ onClick, label }) {
+  return (
+    <button onClick={onClick} className={`${linkTextStyle}`}>
+      {label}
+    </button>
   );
 }
 
@@ -300,24 +315,13 @@ function HowToPlay({ setPageKey }) {
         </div>
       </div>
       <div className="space-x-4 text-left">
-        <a
-          href="https://apps.apple.com/us/app/stroopwafel/id6470153525"
-          className={`${linkTextStyle}`}
-        >
-          Github
-        </a>
-        <a
-          href="https://apps.apple.com/us/app/stroopwafel/id6470153525"
-          className={`${linkTextStyle}`}
-        >
-          App Store
-        </a>
-        <button
+        <Github />
+        <AppStore />
+        <PageButton
           onClick={() => setPageKey("main")}
+          label={"Main"}
           className={`${linkTextStyle}`}
-        >
-          Main
-        </button>
+        />
       </div>
     </div>
   );
@@ -329,8 +333,11 @@ function Main({ setPageKey }) {
       <Logo />
       <div className={`${infoTextStyle}`}>
         Stroopwafel a casual game based on the Stroop effect. The app was built
-        to demonstrate how you can use InstantDB to build and launch real apps
-        to the App Store.
+        to demonstrate how you can use{" "}
+        <a href="https://instantdb.com" className={`${linkTextStyle}`}>
+          InstantDB
+        </a>{" "}
+        to build and launch real apps to the App Store.
       </div>
       <div className={`${infoTextStyle}`}>
         More than just a toy example, you can see how to leverage Instant to
@@ -342,24 +349,13 @@ function Main({ setPageKey }) {
         organization.
       </div>
       <div className="space-x-4 text-left">
-        <a
-          href="https://apps.apple.com/us/app/stroopwafel/id6470153525"
-          className={`${linkTextStyle}`}
-        >
-          Github
-        </a>
-        <a
-          href="https://apps.apple.com/us/app/stroopwafel/id6470153525"
-          className={`${linkTextStyle}`}
-        >
-          App Store
-        </a>
-        <button
+        <Github />
+        <AppStore />
+        <PageButton
           onClick={() => setPageKey("play")}
+          label={"How to play"}
           className={`${linkTextStyle}`}
-        >
-          How to Play
-        </button>
+        />
       </div>
     </div>
   );
@@ -383,7 +379,7 @@ function App() {
       break;
   }
   return (
-    <div className={`${bgColor} py-8`}>
+    <div className="py-8">
       <Page setPageKey={setPageKey} />
     </div>
   );
