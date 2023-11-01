@@ -346,7 +346,7 @@ function Main({ setPageKey }) {
       <div className={`${infoTextStyle}`}>
         We also included a bunch of detail that comes with shipping mobile apps:
         from how to do navigation in React Native, how to enable deep links, and
-        to how to organize code.
+        how to organize code.
       </div>
       <div className="space-x-4 text-left">
         <Github />
