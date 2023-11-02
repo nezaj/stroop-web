@@ -332,8 +332,8 @@ function Main({ setPageKey }) {
     <div className={`flex-col text-center w-[350px] px-4 mx-auto`}>
       <Logo />
       <div className={`${infoTextStyle}`}>
-        Stroopwafel a casual game based on the Stroop effect. The app was built
-        to demonstrate how you can use{" "}
+        Stroopwafel is a casual game based on the Stroop effect. The app was
+        built to demonstrate how you can use{" "}
         <a href="https://instantdb.com" className={`${linkTextStyle}`}>
           InstantDB
         </a>{" "}
