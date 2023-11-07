@@ -8,4 +8,3 @@ dev:
 deploy:
 	@echo "Deploying to github pages..."
 	npm run deploy
-

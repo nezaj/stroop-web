@@ -2,7 +2,6 @@
 
 [See it live](https://stroopwafel/app)
 
-
 ## Quick Start
 Make it work
 ```
@@ -15,5 +14,3 @@ Depoy
 ```
 make deploy
 ```
-
-
