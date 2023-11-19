@@ -1,6 +1,6 @@
 # Stroopwafel Landing Page
 
-[See it live](https://stroopwafel/app)
+[See it live](https://stroopwafel.app)
 
 ## Quick Start
 Make it work
